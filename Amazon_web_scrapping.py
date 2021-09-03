@@ -11,7 +11,7 @@ URL = 'https://www.amazon.in/Designer-Unicorn-Engineer-Because-Official/dp/B08JF
 
 # header from url:- httpbin.org/get
 headers = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"}
+    "paste the header here from the url:-  httpbin.org/get"}
 
 # Extracting data from Website reading HTML
 page = requests.get(URL, headers=headers)
@@ -46,8 +46,7 @@ with open('Amazon_Scrapper_Dataset.csv', 'a+', newline='', encoding='UTF8') as f
     writer = csv.writer(f)
     writer.writerow(data)
 
-df = pd.read_csv(
-    'D:\Git_Repo_My_Learnings\Amazon_Web_Scraping Using Python\Amazon_Scrapper_Dataset.csv')
+df = pd.read_csv('path_name\Amazon_Scrapper_Dataset.csv')
 print(df)
 
 
@@ -58,7 +57,7 @@ def check_price():
 
 # header from url:- httpbin.org/get
     headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"}
+        "paste the header here from the url:-  httpbin.org/get"}
 
 # Extracting data from Website reading HTML
     page = requests.get(URL, headers=headers)
@@ -90,7 +89,7 @@ while(True):
     check_price()
     time.sleep(1)
 
-# --In case use this code to snd email if price goes up or down
+# --In case use this code to snd email for up date if price goes up or down
 # def send_mail():
 #     server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
 #     server.ehlo()
